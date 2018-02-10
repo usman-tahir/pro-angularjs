@@ -1,0 +1,22 @@
+{
+  "name": "todo",
+  "description": "An AngularJS To-do application",
+  "main": "index.js",
+  "authors": [
+    "usman-tahir <tahir.usman.ali94@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/usman-tahir/pro-angularjs",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "1",
+    "bootstrap": "3"
+  }
+}
