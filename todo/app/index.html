@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en" ng-app="todoApplication" ng-cloak>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Todo Application</title>
+
+    <link rel="stylesheet" href="bower/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bower/bootstrap/dist/css/bootstrap-theme.min.css">
+</head>
+<body ng-controller="todoController" ng-cloak>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <h1 class="text-center">{{ title }}</h1>
+                <div class="input-group">
+                    <input type="text" class="form-control" ng-model="action" placeholder="Enter an item">
+                    <span class="input-group-btn">
+                        <button class="btn btn-success" ng-click="add(action)">
+                            <span class="glyphicon glyphicon-plus"></span>
+                        </button>
+                    </span>
+                </div>
+                <br>
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Description</th>
+                            <th></th>
+                            <th>Done</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="item in items">
+                            <td>{{ item.action }}</td>
+                            <td>
+                                <input type="checkbox" ng-model="item.done">
+                            </td>
+                            <td>
+                                <span ng-class="item.done ? 'glyphicon glyphicon-ok text-success' : 'glyphicon glyphicon-remove text-danger'"></span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <br>
+                <span ng-hide="incompleteCount() === 0">
+                    Items left: <span class="label label-primary">{{ incompleteCount() }}</span>
+                </span>
+                <span ng-hide="incompleteCount() !== 0">
+                    <span class="label label-success">All done!</span>
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <script src="bower/jquery/dist/jquery.min.js"></script>
+    <script src="bower/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="bower/angular/angular.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
