@@ -1,0 +1,22 @@
+{
+  "name": "todo-promise",
+  "homepage": "https://github.com/usman-tahir/pro-angularjs",
+  "authors": [
+    "usman-tahir <tahir.usman.ali94@outlook.com>"
+  ],
+  "description": "",
+  "main": "index.js",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "1",
+    "bootstrap": "3"
+  }
+}
