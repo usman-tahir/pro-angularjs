@@ -1,0 +1,18 @@
+[
+    {
+        "action": "do laundry",
+        "completed": false
+    },
+    {
+        "action": "pick up groceries",
+        "completed": true
+    },
+    {
+        "action": "cook dinner",
+        "completed": false
+    },
+    {
+        "action": "put away laundry",
+        "completed": false
+    }
+]
